@@ -1,0 +1,56 @@
+// Get variables
+@import "./src/app/style/_variables";
+
+* {
+  color: $black;
+}
+
+.resumeContainer {
+  padding: 0;
+  margin: 5px 0;
+  .row {   
+    background-color: $white;
+    margin: 0 80px !important;  
+    .col {
+      min-height: 150px;
+      background-color: $white;
+      text-align: left;
+      &.col-padding {
+        padding-left: 30px;
+      }
+
+      #photo-header {      
+        hr {
+          padding: 0;
+          margin: 5px 0;
+          border-color: $grey;
+        }
+        padding-bottom: 20px;
+      }
+      #text-header {
+        padding: 20px 0 0;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+        font-family: $font-face1;
+        h1 {
+          text-transform: uppercase;
+          font-size: 2em;
+          letter-spacing: -1px;
+          margin-top: 5px;
+          span {
+            color: $orange;
+          }
+          sup {
+            opacity: 0.5;
+          }
+        }
+      }
+
+      /* The typing effect */
+      @keyframes type {
+        from { width: 0 }
+      }
+    }
+  }
+}
