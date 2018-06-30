@@ -14,7 +14,7 @@ import {LanguageService} from 'services/language/language.service';
 })
 
 export class AppComponent {
-    public lang: object = {};
+    public lang;
     public copyright: object = {};
     private copyrightText = 'copyright';
 

@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 
 export class EducationListComponent {
-    @Input() educationInfo: Object;
+    @Input() educationInfo;
 
     constructor() {
         console.log(JSON.stringify(this.educationInfo));

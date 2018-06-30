@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 
 export class ContactListComponent {
-    @Input() contactInfo: Object;
+    @Input() contactInfo;
 
     constructor() {}
 }
