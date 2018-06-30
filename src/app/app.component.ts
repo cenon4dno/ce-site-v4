@@ -1,7 +1,7 @@
 /// src/app/index.ts
 import {Component} from '@angular/core';
-import {Configuration} from 'services/configuration/configuration.service';
-import {Language} from 'services/language/language.service';
+import {ConfigurationService} from 'services/configuration/configuration.service';
+import {LanguageService} from 'services/language/language.service';
 
 /*
  * App Component
@@ -16,9 +16,9 @@ import {Language} from 'services/language/language.service';
 export class AppComponent {
     public lang: object = {};
     public copyright: object = {};
-    private copyrightText: string = 'copyright';
+    private copyrightText = 'copyright';
 
-    constructor(private intLang: Language, private configuration: Configuration) {
+    constructor(private intLang: LanguageService, private configuration: ConfigurationService) {
 
         this.configuration.getConfig()
             .then((config) => {

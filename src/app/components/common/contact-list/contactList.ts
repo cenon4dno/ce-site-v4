@@ -6,10 +6,8 @@ import { Component, Input } from '@angular/core';
     templateUrl: './contactList.template.html'
 })
 
-export class ContactList {
+export class ContactListComponent {
     @Input() contactInfo: Object;
 
-    constructor() {
-        console.log(JSON.stringify(this.contactInfo));
-    }
+    constructor() {}
 }

@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Location } from '@angular/common';
-import { Config } from 'config/config';
+import { ConfigCollectionService } from 'config/config.service';
 
 @Injectable()
-export class Configuration {
+export class ConfigurationService {
   title: string = 'Environmental configurations';
   env: string = 'prod';
   content: string = '1';
@@ -12,7 +12,7 @@ export class Configuration {
    constructor(
      private http: Http,
      private location: Location,
-     private config: Config
+     private config: ConfigCollectionService
     ) {
     this.env = this.getEnv();
    }

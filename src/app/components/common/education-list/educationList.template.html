@@ -1,0 +1,13 @@
+<div class="education-item">
+    <div *ngIf="!educationInfo.url" class="title">
+        <i class="material-icons">school</i> {{educationInfo.name}}
+    </div>
+    <div class="details" *ngIf="educationInfo.notes">
+        <span class="schoolYear" *ngIf="educationInfo.fromYear">
+            {{educationInfo.fromYear}} - {{educationInfo.toYear}}
+        </span>
+        <span class="notes" *ngIf="educationInfo.notes">
+            {{educationInfo.notes}}
+        </span>
+    </div>
+</div>

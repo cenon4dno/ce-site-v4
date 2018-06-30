@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
 @Injectable()
-export class Language {
+export class LanguageService {
   public lang: any;
   public configType: string = 'CONTENT_API';
 

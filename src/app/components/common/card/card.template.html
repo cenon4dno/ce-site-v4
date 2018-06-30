@@ -1,6 +1,6 @@
 <div class="card border-light mb-3" *ngIf="cardInfo">
     <div class="card-header">
-        <span class="icon glyphicon {{cardInfo.icon}}" aria-hidden="true"></span>
+        <span class="icon glyphicon {{cardInfo.icon}}" aria-hidden="true"></span>&nbsp;
         <span class="title">{{cardInfo.title}}</span>
     </div>
     <div class="card-body" *ngIf="cardInfo.details">
@@ -12,7 +12,12 @@
         </p>
         <div *ngIf="cardInfo.details.contacts">
             <div *ngFor="let contact of cardInfo.details.contacts">
-                    <contact-list [contactInfo]="contact"></contact-list>
+                <contact-list [contactInfo]="contact"></contact-list>
+            </div>
+        </div>
+        <div *ngIf="cardInfo.details.education">
+            <div *ngFor="let education of cardInfo.details.education">
+                <education-list [educationInfo]="education"></education-list>
             </div>
         </div>
     </div>

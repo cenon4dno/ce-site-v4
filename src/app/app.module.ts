@@ -1,40 +1,55 @@
+
 import 'hammerjs';
 
+// Module
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { Location } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 
+// Services
+import { LanguageService } from './services/language/language.service';
+import { ConfigurationService } from './services/configuration/configuration.service';
+import { ConfigCollectionService } from './config/config.service';
+
+// Components
 import { AppComponent } from './app.component';
-import { Language } from './services/language/language.service';
-import { Configuration } from './services/configuration/configuration.service';
-import { Config } from './config/config';
-import { Home } from './components/home/home';
-import { About } from './components/about/about';
-import { Card } from './components/common/card/card';
-import { CircleImage } from './components/common/circle-image/circleImage';
-import { ContactList } from './components/common/contact-list/contactList';
+import { HomeComponent } from './components/home/home';
+import { AboutComponent } from './components/about/about';
+import { CardComponent } from './components/common/card/card';
+import { CircleImageComponent } from './components/common/circle-image/circleImage';
+import { ContactListComponent } from './components/common/contact-list/contactList';
+import { EducationListComponent } from './components/common/education-list/educationList';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Home,
-    About,
-    Card,
-    CircleImage,
-    ContactList
+    HomeComponent,
+    AboutComponent,
+    CardComponent,
+    CircleImageComponent,
+    ContactListComponent,
+    EducationListComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule.forRoot([]),
     BrowserAnimationsModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    NgbModule.forRoot(),
+    MatButtonModule,
+    MatCheckboxModule
   ],
-  providers: [Language, Configuration, Location, Config],
+  providers: [
+    LanguageService,
+    ConfigurationService,
+    ConfigCollectionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

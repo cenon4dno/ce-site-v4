@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: './circleImage.template.html'
 })
 
-export class CircleImage {
+export class CircleImageComponent {
   @Input() image: string;
   constructor() {}
 }
