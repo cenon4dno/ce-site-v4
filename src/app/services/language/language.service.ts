@@ -14,7 +14,7 @@ export class LanguageService {
     console.log(this.lang);
     if ( content.length > 0) {
       arrContents = content.filter(
-        x => x.page === page
+        x => x.page === page && x.status != 'inactive'
       );
     }
 
@@ -27,7 +27,7 @@ export class LanguageService {
     console.log(this.lang);
     if ( content.length > 0) {
       arrContents = content.filter(
-        x => x.section === section
+        x => x.section === section && x.status != 'inactive'
       );
     }
 
