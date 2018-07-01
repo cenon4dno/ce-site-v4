@@ -9,7 +9,5 @@ import { Component, Input } from '@angular/core';
 export class EducationListComponent {
     @Input() educationInfo;
 
-    constructor() {
-        console.log(JSON.stringify(this.educationInfo));
-    }
+    constructor() {}
 }

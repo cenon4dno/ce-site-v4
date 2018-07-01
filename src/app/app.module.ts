@@ -24,6 +24,7 @@ import { CardComponent } from './components/common/card/card';
 import { CircleImageComponent } from './components/common/circle-image/circleImage';
 import { ContactListComponent } from './components/common/contact-list/contactList';
 import { EducationListComponent } from './components/common/education-list/educationList';
+import { SkillListComponent } from './components/common/skill-list/skillList';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { EducationListComponent } from './components/common/education-list/educa
     CardComponent,
     CircleImageComponent,
     ContactListComponent,
-    EducationListComponent
+    EducationListComponent,
+    SkillListComponent
   ],
   imports: [
     BrowserModule,

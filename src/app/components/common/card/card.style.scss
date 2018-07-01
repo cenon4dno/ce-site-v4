@@ -20,14 +20,20 @@
         content: "| ";
         animation: blinker 1s linear infinite;
       }
-      // Effects for blinking
-      @keyframes blinker {  
-        50% { opacity: 0; }
-      }
 
       .card-text {
         font-size: 12px;
         display: block;
+      }
+
+      .skillContainer {
+        display: inline;
+        padding: 5px 10px;
+      }
+
+      // Effects for blinking
+      @keyframes blinker {  
+        50% { opacity: 0; }
       }
     }
   }

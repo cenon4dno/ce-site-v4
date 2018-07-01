@@ -1,0 +1,18 @@
+@import "./src/app/style/_variables";
+
+.skill-item {
+    font-family: $font-face1;
+    display: inline-block;
+    > div {
+        display: inline;
+    }
+    .icons {
+        i {
+            &.orange {
+                color: $orange;
+            }
+            font-size: $font-xl;
+        }
+        background-color: $white;
+    }
+}

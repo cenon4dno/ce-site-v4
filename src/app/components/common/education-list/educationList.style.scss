@@ -30,7 +30,7 @@
             font-style: italic;
         }
     }
-    .titlnotese::after {
+    .notes::after {
         content: "| ";
         animation: blinker 1s linear infinite;
     }    
