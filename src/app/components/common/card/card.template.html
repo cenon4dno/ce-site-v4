@@ -25,5 +25,20 @@
                 <skill-list [skillInfo]="skill"></skill-list>
             </div>
         </div>
+        <div *ngIf="cardInfo.details.training">
+            <div class="trainingContainer" *ngFor="let training of cardInfo.details.training">
+                <training-list [trainingInfo]="training"></training-list>
+            </div>
+        </div>
+        <div *ngIf="cardInfo.details.certification">
+            <div class="certificationContainer" *ngFor="let certification of cardInfo.details.certification">
+                <certification-list [certificationInfo]="certification"></certification-list>
+            </div>
+        </div>
+        <div *ngIf="cardInfo.details.hobbies">
+            <div class="hobbiesContainer" *ngFor="let hobbies of cardInfo.details.hobbies">
+                <hobbies-list [hobbiesInfo]="hobbies"></hobbies-list>
+            </div>
+        </div>
     </div>
 </div>

@@ -25,6 +25,9 @@ import { CircleImageComponent } from './components/common/circle-image/circleIma
 import { ContactListComponent } from './components/common/contact-list/contactList';
 import { EducationListComponent } from './components/common/education-list/educationList';
 import { SkillListComponent } from './components/common/skill-list/skillList';
+import { TrainingListComponent } from './components/common/training-list/trainingList';
+import { CertificationListComponent } from './components/common/certification-list/certificationList';
+import { HobbiesListComponent } from './components/common/hobbies-list/hobbiesList';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { SkillListComponent } from './components/common/skill-list/skillList';
     CircleImageComponent,
     ContactListComponent,
     EducationListComponent,
-    SkillListComponent
+    SkillListComponent,
+    TrainingListComponent,
+    CertificationListComponent,
+    HobbiesListComponent
   ],
   imports: [
     BrowserModule,
