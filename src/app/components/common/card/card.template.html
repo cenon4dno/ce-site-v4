@@ -40,5 +40,10 @@
                 <hobbies-list [hobbiesInfo]="hobbies"></hobbies-list>
             </div>
         </div>
+        <div *ngIf="cardInfo.details.experiences">
+            <div class="experienceContainer" *ngFor="let experience of cardInfo.details.experiences">
+                <experience-list [experienceInfo]="experience"></experience-list>
+            </div>
+        </div>
     </div>
 </div>

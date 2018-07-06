@@ -1,0 +1,66 @@
+@import "./src/app/style/_variables";
+
+.experience-item {
+    font-family: $font-face1;
+    display: block;
+    padding-bottom: 10px;
+    > div {
+        display: inline;
+    }
+    .icon {
+        background-color: $grey;
+    }
+    .title {
+        padding-left: 10px;
+        font-size: $font-medium;
+        overflow: hidden;
+        white-space: nowrap; 
+        text-overflow: ellipsis;
+        width: 100%;
+        display: block;
+        .material-icons {
+            font-size: 16px;
+        }
+        .experienceCompanyName {
+            font-weight: bold;
+        }
+        .experienceYear {
+            color: $orange;
+        }
+    }
+    .title:hover {
+        overflow: visible;
+    }
+
+    a {
+        color: $orange;
+    }
+
+    .details {
+        > span, > a, > p {
+            padding-left: 30px;
+        }
+        > a {
+            cursor: pointer;
+        }
+        .position {
+            font-weight: bold;
+        }
+        .technologylink {
+           i {
+                font-size: 12px;
+                vertical-align: bottom;
+            }
+        }
+    }
+
+    .year::after{
+        content: "| ";
+        animation: blinker 1s linear infinite;
+    }
+    
+    // Effects for blinking
+    @keyframes blinker {  
+        50% { opacity: 0; }
+    }
+}

@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { TooltipPosition } from '@angular/material';
+import { FormControl } from '@angular/forms';
 
 @Component ({
     selector: 'hobbies-list',
@@ -8,6 +10,8 @@ import { Component, Input } from '@angular/core';
 
 export class HobbiesListComponent {
     @Input() hobbiesInfo;
+    positionOptions: TooltipPosition[] = ['above'];
+    position = new FormControl(this.positionOptions[0]);
 
     constructor() {}
 }

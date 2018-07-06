@@ -12,6 +12,8 @@
     }
     .card-body {
       width: 90%;
+      padding-bottom: 0;
+      margin-bottom: 0;
       .card-text::before {
         content: "$ ";
       }

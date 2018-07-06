@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatTooltipModule } from '@angular/material';
 
 // Services
 import { LanguageService } from './services/language/language.service';
@@ -28,6 +28,7 @@ import { SkillListComponent } from './components/common/skill-list/skillList';
 import { TrainingListComponent } from './components/common/training-list/trainingList';
 import { CertificationListComponent } from './components/common/certification-list/certificationList';
 import { HobbiesListComponent } from './components/common/hobbies-list/hobbiesList';
+import { ExperienceListComponent } from './components/common/experience-list/experienceList';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { HobbiesListComponent } from './components/common/hobbies-list/hobbiesLi
     SkillListComponent,
     TrainingListComponent,
     CertificationListComponent,
-    HobbiesListComponent
+    HobbiesListComponent,
+    ExperienceListComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,8 @@ import { HobbiesListComponent } from './components/common/hobbies-list/hobbiesLi
     AngularFontAwesomeModule,
     NgbModule.forRoot(),
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatTooltipModule
   ],
   providers: [
     LanguageService,
