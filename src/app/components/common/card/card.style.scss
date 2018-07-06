@@ -8,11 +8,12 @@
         color: $orange;
         font-size: 16px;
         font-weight: bold;
-        padding-bottom: 15px;
       }
     }
     .card-body {
       width: 90%;
+      padding-bottom: 0;
+      margin-bottom: 0;
       .card-text::before {
         content: "$ ";
       }
@@ -20,14 +21,21 @@
         content: "| ";
         animation: blinker 1s linear infinite;
       }
-      // Effects for blinking
-      @keyframes blinker {  
-        50% { opacity: 0; }
-      }
 
       .card-text {
         font-size: 12px;
         display: block;
+      }
+
+      .skillContainer, 
+      .hobbiesContainer {
+        display: inline;
+        padding: 5px 10px;
+      }
+
+      // Effects for blinking
+      @keyframes blinker {  
+        50% { opacity: 0; }
       }
     }
   }

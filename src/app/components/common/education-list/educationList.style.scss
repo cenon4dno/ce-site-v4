@@ -1,0 +1,42 @@
+@import "./src/app/style/_variables";
+
+.education-item {
+    font-family: $font-face1;
+    display: block;
+    > div {
+        display: inline;
+    }
+    .icon {
+        color: $orange;
+    }
+    .title {
+        padding-left: 10px;
+        font-size: $font-medium;
+        .material-icons {
+            font-size: 16px;
+            color: $orange;
+        }
+    }
+    .details {
+        font-size: $font-small;
+        margin-left: 7%;
+        display: block;
+        .schoolYear {
+            display: block;
+            color: $orange;
+            font-weight: bold;
+        }
+        .notes {
+            display: block;
+            font-style: italic;
+        }
+    }
+    .notes::after {
+        content: "| ";
+        animation: blinker 1s linear infinite;
+    }    
+    // Effects for blinking
+    @keyframes blinker {  
+        50% { opacity: 0; }
+    }
+}

@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import {ContactList} from 'components/common/contact-list/contactList';
 
 @Component ({
     selector: 'card',
@@ -7,7 +6,7 @@ import {ContactList} from 'components/common/contact-list/contactList';
     templateUrl: './card.template.html'
 })
 
-export class Card {
+export class CardComponent {
     @Input() cardInfo: Object;
 
     constructor() {}

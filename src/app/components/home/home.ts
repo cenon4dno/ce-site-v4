@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
-import {Language} from 'services/language/language.service';
-import {CircleImage} from 'components/common/circle-image/circleImage';
-import {Card} from 'components/common/card/card';
+import {LanguageService} from 'services/language/language.service';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'home',
@@ -9,13 +8,13 @@ import {Card} from 'components/common/card/card';
   templateUrl: './home.template.html'
 })
 
-export class Home {
+export class HomeComponent {
   public contents: string[];
   public greetings: string[];
-  private header: string = 'greetings';
-  private page: string = 'resume';
+  private header = 'greetings';
+  private page = 'resume';
 
-  constructor(private langFile: Language) {
+  constructor(private langFile: LanguageService, private modalService: NgbModal) {
     this.greetings = langFile.getSectionContent(this.header);
     this.contents = this.sortingOfContents(
       langFile.getPageContent(this.page)

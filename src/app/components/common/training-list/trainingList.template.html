@@ -1,0 +1,15 @@
+<div class="training-item">
+    <div class="title">
+        <i class="material-icons">assignment_turned_in</i> 
+        <span> {{trainingInfo.name}}</span>
+        <span *ngIf="trainingInfo.source">
+            - Source: 
+            <a *ngIf="trainingInfo.link" href="{{trainingInfo.link}}" target="_blank">
+                    {{trainingInfo.source}}
+            </a>
+        </span>
+        <span class="year" *ngIf="trainingInfo.year">
+            ({{trainingInfo.year}})
+        </span>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="hobbies-item">
+    <div class="title">
+        <a *ngIf="hobbiesInfo.iconSource != 'material'"
+            name="{{hobbiesInfo.name}}"
+            class="{{hobbiesInfo.icon}}"></a> 
+        <a *ngIf="hobbiesInfo.iconSource == 'material'"
+            name="{{hobbiesInfo.name}}" 
+            class="material-icons">
+            {{hobbiesInfo.icon}}
+        </a> 
+    </div>
+</div>

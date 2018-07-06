@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Language} from 'services/language/language.service';
+import {LanguageService} from 'services/language/language.service';
 
 @Component({
     selector: 'about',
@@ -7,11 +7,11 @@ import {Language} from 'services/language/language.service';
     styles: ['./about.style.scss']
 })
 
-export class About {
+export class AboutComponent {
     public contents: string[];
-    private page: string = 'about';
+    private page = 'about';
 
-    constructor(private langFile: Language) {
+    constructor(private langFile: LanguageService) {
         this.contents = langFile.getPageContent(this.page);
     }
 }

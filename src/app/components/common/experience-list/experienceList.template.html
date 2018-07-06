@@ -1,0 +1,24 @@
+<div class="experience-item">
+    <div class="title">
+        <i class="material-icons">work</i>&nbsp;
+        <span class="experienceCompanyName" *ngIf="experienceInfo.company">
+            {{experienceInfo.company}}
+        </span>
+        <span class="experienceYear" *ngIf="experienceInfo.fromYear">
+            ({{experienceInfo.fromYear}} - {{experienceInfo.toYear}})
+        </span>
+    </div>
+    <div class="details">
+        <span class="position" *ngIf="experienceInfo.position">
+            {{experienceInfo.position}}
+        </span> <br />
+        <a (click)="showTechnology(bTechnologyDetail)" class="technologylink">
+            Technologies: 
+            <i *ngIf="!bTechnologyDetail" class="material-icons">keyboard_arrow_right</i> 
+            <i *ngIf="bTechnologyDetail" class="material-icons">keyboard_arrow_down</i> 
+        </a>
+        <p class="technologyDetail" *ngIf="bTechnologyDetail">
+            {{experienceInfo.technologies}}
+        </p>
+    </div>
+</div>

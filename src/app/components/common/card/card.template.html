@@ -1,6 +1,6 @@
 <div class="card border-light mb-3" *ngIf="cardInfo">
     <div class="card-header">
-        <span class="icon glyphicon {{cardInfo.icon}}" aria-hidden="true"></span>
+        <span class="icon glyphicon {{cardInfo.icon}}" aria-hidden="true"></span>&nbsp;
         <span class="title">{{cardInfo.title}}</span>
     </div>
     <div class="card-body" *ngIf="cardInfo.details">
@@ -12,7 +12,37 @@
         </p>
         <div *ngIf="cardInfo.details.contacts">
             <div *ngFor="let contact of cardInfo.details.contacts">
-                    <contact-list [contactInfo]="contact"></contact-list>
+                <contact-list [contactInfo]="contact"></contact-list>
+            </div>
+        </div>
+        <div *ngIf="cardInfo.details.education">
+            <div *ngFor="let education of cardInfo.details.education">
+                <education-list [educationInfo]="education"></education-list>
+            </div>
+        </div>
+        <div *ngIf="cardInfo.details.skills">
+            <div class="skillContainer" *ngFor="let skill of cardInfo.details.skills">
+                <skill-list [skillInfo]="skill"></skill-list>
+            </div>
+        </div>
+        <div *ngIf="cardInfo.details.training">
+            <div class="trainingContainer" *ngFor="let training of cardInfo.details.training">
+                <training-list [trainingInfo]="training"></training-list>
+            </div>
+        </div>
+        <div *ngIf="cardInfo.details.certification">
+            <div class="certificationContainer" *ngFor="let certification of cardInfo.details.certification">
+                <certification-list [certificationInfo]="certification"></certification-list>
+            </div>
+        </div>
+        <div *ngIf="cardInfo.details.hobbies">
+            <div class="hobbiesContainer" *ngFor="let hobbies of cardInfo.details.hobbies">
+                <hobbies-list [hobbiesInfo]="hobbies"></hobbies-list>
+            </div>
+        </div>
+        <div *ngIf="cardInfo.details.experiences">
+            <div class="experienceContainer" *ngFor="let experience of cardInfo.details.experiences">
+                <experience-list [experienceInfo]="experience"></experience-list>
             </div>
         </div>
     </div>

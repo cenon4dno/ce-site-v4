@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
 @Injectable()
-export class Language {
+export class LanguageService {
   public lang: any;
   public configType: string = 'CONTENT_API';
 
@@ -11,10 +11,9 @@ export class Language {
   public getPageContent(page) {
     let arrContents = [];
     let content = this.lang.contents || [];
-    console.log(this.lang);
     if ( content.length > 0) {
       arrContents = content.filter(
-        x => x.page === page
+        x => x.page === page && x.status != 'inactive'
       );
     }
 
@@ -24,10 +23,9 @@ export class Language {
   public getSectionContent(section) {
     let arrContents = [];
     let content = this.lang.contents || [];
-    console.log(this.lang);
     if ( content.length > 0) {
       arrContents = content.filter(
-        x => x.section === section
+        x => x.section === section && x.status != 'inactive'
       );
     }
 
