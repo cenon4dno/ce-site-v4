@@ -1,9 +1,10 @@
 <div class="hobbies-item">
     <div class="title">
-        <a name="{{hobbiesInfo.name}}" *ngIf="hobbiesInfo.iconSource != 'material'" class="{{hobbiesInfo.icon}}"></a> 
+        <a *ngIf="hobbiesInfo.iconSource != 'material'"
+            name="{{hobbiesInfo.name}}"
+            class="{{hobbiesInfo.icon}}"></a> 
         <a *ngIf="hobbiesInfo.iconSource == 'material'"
             name="{{hobbiesInfo.name}}" 
-            matTooltip="test"
             class="material-icons">
             {{hobbiesInfo.icon}}
         </a> 

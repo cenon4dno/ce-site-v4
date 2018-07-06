@@ -11,7 +11,6 @@ export class LanguageService {
   public getPageContent(page) {
     let arrContents = [];
     let content = this.lang.contents || [];
-    console.log(this.lang);
     if ( content.length > 0) {
       arrContents = content.filter(
         x => x.page === page && x.status != 'inactive'
@@ -24,7 +23,6 @@ export class LanguageService {
   public getSectionContent(section) {
     let arrContents = [];
     let content = this.lang.contents || [];
-    console.log(this.lang);
     if ( content.length > 0) {
       arrContents = content.filter(
         x => x.section === section && x.status != 'inactive'

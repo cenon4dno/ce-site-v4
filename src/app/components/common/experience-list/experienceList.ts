@@ -13,8 +13,6 @@ export class ExperienceListComponent {
     constructor() {}
 
     showTechnology(bDetailStatus) {
-        console.log(this.bTechnologyDetail);
         this.bTechnologyDetail = !bDetailStatus;
-        console.log(this.bTechnologyDetail);
     }
 }

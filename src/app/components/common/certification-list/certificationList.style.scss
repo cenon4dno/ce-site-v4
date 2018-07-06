@@ -7,7 +7,7 @@
         display: inline;
     }
     .icon {
-        background-color: $grey;
+        background-color: $orange;
     }
     .title {
         padding-left: 10px;
@@ -19,6 +19,7 @@
         display: block;
         .material-icons {
             font-size: 16px;
+            color: $orange;
         }
     }
     .title:hover {
