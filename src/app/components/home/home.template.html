@@ -15,7 +15,9 @@
   <div class="row">
     <div *ngFor="let section of contents; let i = index;" 
       class="col {{section.section}}" 
-      [ngClass]="{'col-lg-7 col-padding': i%2==0, 'col-lg-5': i%2!=0}">
+      [ngClass]="{
+        'col-lg-7 col-md-7 col-sm-12 col-12 col-padding': i%2==0, 
+        'col-lg-5 col-md-5 col-sm-12 col-12': i%2!=0}">
         <card [cardInfo]="section"></card>
     </div>
   </div>
