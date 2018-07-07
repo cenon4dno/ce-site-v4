@@ -1,14 +1,9 @@
-import 'hammerjs';
-
 // Module
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MatButtonModule, MatCheckboxModule, MatTooltipModule } from '@angular/material';
 
 // Services
 import { LanguageService } from './services/language/language.service';
@@ -49,11 +44,6 @@ import { ExperienceListComponent } from './components/common/experience-list/exp
     HttpModule,
     RouterModule.forRoot([]),
     BrowserAnimationsModule,
-    AngularFontAwesomeModule,
-    NgbModule.forRoot(),
-    MatButtonModule,
-    MatCheckboxModule,
-    MatTooltipModule
   ],
   providers: [
     LanguageService,
