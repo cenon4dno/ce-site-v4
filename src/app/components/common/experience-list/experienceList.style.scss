@@ -11,7 +11,6 @@
         color: $orange;
     }
     .title {
-        padding-left: 10px;
         font-size: $font-medium;
         overflow: hidden;
         white-space: nowrap; 
@@ -39,19 +38,25 @@
 
     .details {
         > span, > a, > p {
-            padding-left: 30px;
+            padding-left: 20px;
         }
         > a {
             cursor: pointer;
+            font-size: 8px;
         }
         .position {
             font-weight: bold;
+            font-style: italic;
+            font-size: 12px;
         }
         .technologylink {
            i {
                 font-size: 12px;
                 vertical-align: bottom;
             }
+        }
+        .technologyDetail {
+            font-size: 12px;
         }
     }
 
