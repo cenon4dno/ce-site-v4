@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {LanguageService} from 'services/language/language.service';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'home',
@@ -14,7 +13,7 @@ export class HomeComponent {
   private header = 'greetings';
   private page = 'resume';
 
-  constructor(private langFile: LanguageService, private modalService: NgbModal) {
+  constructor(private langFile: LanguageService) {
     this.greetings = langFile.getSectionContent(this.header);
     this.contents = this.sortingOfContents(
       langFile.getPageContent(this.page)

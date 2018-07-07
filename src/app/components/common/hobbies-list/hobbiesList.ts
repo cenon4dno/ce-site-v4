@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import {TooltipPosition} from '@angular/material';
 
 @Component ({
     selector: 'hobbies-list',
