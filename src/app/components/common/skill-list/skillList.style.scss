@@ -3,16 +3,20 @@
 .skill-item {
     font-family: $font-face1;
     display: inline-block;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    
     > div {
         display: inline;
     }
+
     .icons {
+        background-color: $white;
         i {
             &.orange {
                 color: $orange;
             }
             font-size: $font-xl;
         }
-        background-color: $white;
     }
 }
