@@ -9,8 +9,13 @@ import { Component, Input } from '@angular/core';
 export class ExperienceListComponent {
     @Input() experienceInfo;
     bTechnologyDetail: boolean = false;
+    bProjectDetail: boolean = false;
 
     constructor() {}
+
+    showProject(bProjectStatus) {
+        this.bProjectDetail = !bProjectStatus;
+    }
 
     showTechnology(bDetailStatus) {
         this.bTechnologyDetail = !bDetailStatus;
