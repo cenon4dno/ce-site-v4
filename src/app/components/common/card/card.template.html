@@ -2,6 +2,11 @@
     <div class="card-header">
         <span class="icon glyphicon {{cardInfo.icon}}" aria-hidden="true"></span>&nbsp;
         <span class="title">{{cardInfo.title}}</span>
+        <div *ngIf="cardInfo.options" class="options">
+            <a *ngFor="let option of cardInfo.options">
+                {{option}}
+            </a>
+        </div>
     </div>
     <div class="card-body" *ngIf="cardInfo.details">
         <h5 class="card-title" *ngIf="cardInfo.details.title">

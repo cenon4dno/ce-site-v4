@@ -3,22 +3,38 @@
 .card {
     font-family:  $font-face1;
     padding-bottom: 20px;
+
     .card-header {
       padding-bottom: 15px;
+
       .icon, .title {
         color: $orange;
         font-size: 16px;
         font-weight: bold;
       }
+
+      .options {
+        padding-left: 50%;
+        color: $orange;
+        display: inline;
+        a {
+          color: $orange;
+          text-decoration: underline;
+          cursor: pointer;
+        }  
+      }
     }
+
     .card-body {
       width: 90%;
       padding-bottom: 0;
       margin-bottom: 0;
       padding-left: 10px;
+
       .card-text::before {
         content: "$ ";
       }
+
       .card-text::after {
         content: "| ";
         animation: blinker 1s linear infinite;

@@ -16,8 +16,8 @@
     <div *ngFor="let section of contents; let i = index;" 
       class="col col-md-12 col-sm-12 col-12 {{section.section}}" 
       [ngClass]="{
-        'col-lg-7': i%2==0, 
-        'col-lg-5': i%2!=0}">
+        'col-lg-7 col-print-7': i%2==0, 
+        'col-lg-5 col-print-5': i%2!=0}">
         <card [cardInfo]="section"></card>
     </div>
   </div>
