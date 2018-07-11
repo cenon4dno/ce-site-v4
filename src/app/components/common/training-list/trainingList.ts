@@ -8,6 +8,11 @@ import { Component, Input } from '@angular/core';
 
 export class TrainingListComponent {
     @Input() trainingInfo;
+    bDetail: boolean = false;
 
     constructor() {}
+
+    showDetails(bShowDetail) {
+        this.bDetail = !bShowDetail;
+    }
 }

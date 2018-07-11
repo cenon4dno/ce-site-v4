@@ -48,7 +48,20 @@
             font-weight: bold;
             font-style: italic;
             font-size: 12px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 80%;
+            overflow: hidden;
         }
+        .projectlink {
+            i {
+                 font-size: 12px;
+                 vertical-align: bottom;
+             }
+         }
+         .projectDetail {
+             font-size: 12px;
+         }
         .technologylink {
            i {
                 font-size: 12px;

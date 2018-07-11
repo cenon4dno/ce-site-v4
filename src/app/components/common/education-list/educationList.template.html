@@ -2,12 +2,15 @@
     <div class="title">
         <i class="material-icons">school</i>&nbsp;{{educationInfo.name}}
     </div>
-    <div class="details" *ngIf="educationInfo.notes">
+    <div class="details">
         <span class="schoolYear" *ngIf="educationInfo.fromYear">
             {{educationInfo.fromYear}} - {{educationInfo.toYear}}
         </span>
-        <span class="notes" *ngIf="educationInfo.notes">
-            {{educationInfo.notes}}
+        <span class="achievements" *ngIf="educationInfo.achievements">
+            Achievement: {{educationInfo.achievements}}
+        </span>
+        <span class="course" *ngIf="educationInfo.course">
+            Course: {{educationInfo.course}}
         </span>
     </div>
 </div>

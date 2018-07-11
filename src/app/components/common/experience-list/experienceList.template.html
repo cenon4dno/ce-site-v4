@@ -11,14 +11,29 @@
     <div class="details">
         <span class="position" *ngIf="experienceInfo.position">
             {{experienceInfo.position}}
-        </span> <br />
+        </span>
+        <br />
+        <a *ngIf="experienceInfo.projects" (click)="showProject(bProjectDetail)" class="projectlink">
+            Projects: 
+            <i *ngIf="!bProjectDetail" class="material-icons">keyboard_arrow_right</i> 
+            <i *ngIf="bProjectDetail" class="material-icons">keyboard_arrow_down</i> 
+        </a>
+        <ul class="ProjectDetail" *ngIf="experienceInfo.projects && bProjectDetail">
+            <li *ngFor="let project of experienceInfo.projects">
+                <a *ngIf="project.link" href="{{project.link}}" target="_blank">{{project.name}}</a>
+                <span *ngIf="!project.link">{{project.name}}</span>
+            </li>
+        </ul>
+        <br *ngIf="experienceInfo.projects" />
         <a (click)="showTechnology(bTechnologyDetail)" class="technologylink">
             Technologies: 
             <i *ngIf="!bTechnologyDetail" class="material-icons">keyboard_arrow_right</i> 
             <i *ngIf="bTechnologyDetail" class="material-icons">keyboard_arrow_down</i> 
         </a>
-        <p class="technologyDetail" *ngIf="bTechnologyDetail">
-            {{experienceInfo.technologies}}
-        </p>
+        <ul class="technologyDetail" *ngIf="experienceInfo.technologies && bTechnologyDetail">
+            <li *ngFor="let tech of experienceInfo.technologies">
+                <span>{{tech}}</span>
+            </li>
+        </ul>
     </div>
 </div>

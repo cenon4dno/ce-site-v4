@@ -12,11 +12,27 @@
 
     .icons {
         background-color: $white;
+
         i {
             &.orange {
                 color: $orange;
             }
             font-size: $font-xl;
+        }
+
+        .skillName  {
+            display: block;
+            font-size: 8;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 50px;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+
+            &:hover {
+                overflow: visible;
+            }
         }
     }
 }

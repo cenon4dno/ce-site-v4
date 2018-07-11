@@ -1,15 +1,16 @@
 <div class="training-item">
     <div class="title">
         <i class="material-icons">assignment_turned_in</i> 
-        <span> {{trainingInfo.name}}</span>
-        <span *ngIf="trainingInfo.source">
-            - Source: 
+        <span> {{trainingInfo.name}} ({{trainingInfo.year}})</span>
+        <a (click)="showDetails(bDetail)" class="trainingDetailLink"> 
+            <i *ngIf="!bDetail" class="material-icons">keyboard_arrow_right</i> 
+            <i *ngIf="bDetail" class="material-icons">keyboard_arrow_down</i> 
+        </a>
+        <p class="source" *ngIf="bDetail">
+            Source: 
             <a *ngIf="trainingInfo.link" href="{{trainingInfo.link}}" target="_blank">
-                    {{trainingInfo.source}}
+                {{trainingInfo.source}}
             </a>
-        </span>
-        <span class="year" *ngIf="trainingInfo.year">
-            ({{trainingInfo.year}})
-        </span>
+        </p>
     </div>
 </div>

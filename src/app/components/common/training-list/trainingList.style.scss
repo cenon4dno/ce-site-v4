@@ -9,6 +9,7 @@
     .icon {
         background-color: $grey;
     }
+
     .title {
         font-size: $font-medium;
         overflow: hidden;
@@ -16,17 +17,28 @@
         text-overflow: ellipsis;
         width: 100%;
         display: block;
+
         .material-icons {
             font-size: 16px;
             color: $orange;
         }
+
+        &:hover {
+            overflow: visible;
+        }
     }
-    .title:hover {
-        overflow: visible;
+
+    .source {
+        padding-left: 20px;
+        a {
+            cursor: pointer;
+        }
     }
+    
 
     a {
         color: $orange;
+        cursor: pointer;
     }
 
     .year::after{
