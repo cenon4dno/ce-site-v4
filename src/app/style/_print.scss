@@ -1,8 +1,13 @@
+@import "./src/app/style/_variables";
+
 @media print
 {    
+    body {
+        color: $orange;
+    }
+
     .no-print, .no-print *
     {
-        display: none !important;
     }
 
     .col-print-1 {width:8%;  float:left;}

@@ -14,13 +14,15 @@
       }
 
       .options {
-        padding-left: 50%;
+        padding-left: 55%;
         color: $orange;
         display: inline;
+
         a {
           color: $orange;
           text-decoration: underline;
           cursor: pointer;
+          font-size: 10px;
         }  
       }
     }

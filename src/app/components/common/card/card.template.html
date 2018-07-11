@@ -3,9 +3,7 @@
         <span class="icon glyphicon {{cardInfo.icon}}" aria-hidden="true"></span>&nbsp;
         <span class="title">{{cardInfo.title}}</span>
         <div *ngIf="cardInfo.options" class="options">
-            <a *ngFor="let option of cardInfo.options">
-                {{option}}
-            </a>
+            <a *ngFor="let option of cardInfo.options" (click)="activateOption(cardInfo.title, option)">{{option}}</a>
         </div>
     </div>
     <div class="card-body" *ngIf="cardInfo.details">
@@ -27,7 +25,7 @@
         </div>
         <div *ngIf="cardInfo.details.skills">
             <div class="skillContainer" *ngFor="let skill of cardInfo.details.skills">
-                <skill-list [skillInfo]="skill"></skill-list>
+                <skill-list [skillInfo]="skill" [option]="skillOption"></skill-list>
             </div>
         </div>
         <div *ngIf="cardInfo.details.training">

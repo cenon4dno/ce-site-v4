@@ -1,6 +1,6 @@
 <div class="skill-item">
     <div class="icons" matTooltip="test">
         <i class="{{skillInfo.icon}} colored"></i>
-        <span class="skillName">{{skillInfo.skillName}}</span>
+        <span *ngIf="option" class="skillName">{{skillInfo.skillName}}</span>
     </div>
 </div>

@@ -3,6 +3,8 @@
 .hobbies-item {
     font-family: $font-face1;
     display: inline;
+    position: relative;
+
     > div {
         display: inline;
     }
@@ -16,6 +18,16 @@
             font-size: 32px;
             padding-top: 10px;
         }
+    }
+
+    .name {
+        vertical-align: bottom;
+        position: absolute;
+        overflow: hidden;
+        white-space: nowrap; 
+        text-overflow: ellipsis;
+        bottom: -5px;
+        left: 0;
     }
 
     a {
