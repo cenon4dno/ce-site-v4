@@ -23,7 +23,7 @@
                 <education-list [educationInfo]="education"></education-list>
             </div>
         </div>
-        <div *ngIf="cardInfo.details.skills">
+        <div class="skillCardContainer" *ngIf="cardInfo.details.skills">
             <div class="skillContainer" *ngFor="let skill of cardInfo.details.skills">
                 <skill-list [skillInfo]="skill" [option]="skillOption"></skill-list>
             </div>
