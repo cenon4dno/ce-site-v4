@@ -9,6 +9,7 @@
     .icon {
         background-color: $grey;
     }
+
     .title {
         font-size: $font-medium;
         overflow: hidden;
@@ -26,10 +27,18 @@
             overflow: visible;
         }
     }
+
+    .source {
+        padding-left: 20px;
+        a {
+            cursor: pointer;
+        }
+    }
     
 
     a {
         color: $orange;
+        cursor: pointer;
     }
 
     .year::after{

@@ -26,12 +26,13 @@
             color: $orange;
             font-weight: bold;
         }
-        .notes {
+        .achievements, .course {
             display: block;
             font-style: italic;
         }
     }
-    .notes::after {
+    .achievements::after,
+    .course::after {
         content: "| ";
         animation: blinker 1s linear infinite;
     }    
