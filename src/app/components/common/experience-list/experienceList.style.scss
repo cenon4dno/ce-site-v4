@@ -42,7 +42,8 @@
         }
         > a {
             cursor: pointer;
-            font-size: 8px;
+            font-size: 12px;
+            display: block;
         }
         .position {
             font-weight: bold;
@@ -59,8 +60,8 @@
                  vertical-align: bottom;
              }
          }
-         .projectDetail {
-             font-size: 12px;
+         .ProjectDetail {
+            font-size: 12px;
          }
         .technologylink {
            i {

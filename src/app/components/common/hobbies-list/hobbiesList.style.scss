@@ -1,9 +1,16 @@
 @import "./src/app/style/_variables";
 
-.hobbies-item {
+.hobbies-item {    
     font-family: $font-face1;
-    display: inline;
+    display: inline-block;
     position: relative;
+
+    &:hover {
+        .hidden {
+            display: block !important;
+            visibility: visible !important;
+        }
+    }
 
     > div {
         display: inline;
@@ -17,6 +24,8 @@
         a {
             font-size: 32px;
             padding-top: 10px;
+            text-decoration: none;
+            cursor: pointer;
         }
     }
 
@@ -26,8 +35,6 @@
         overflow: hidden;
         white-space: nowrap; 
         text-overflow: ellipsis;
-        bottom: -5px;
-        left: 0;
     }
 
     a {
