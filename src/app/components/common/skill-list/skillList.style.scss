@@ -5,6 +5,7 @@
     display: inline-block;
     padding-left: 10px;
     padding-bottom: 10px;
+    text-align: center;
     
     > div {
         display: inline;
@@ -14,6 +15,7 @@
         background-color: $white;
 
         i {
+            cursor: pointer;
             &.orange {
                 color: $orange;
             }
@@ -22,7 +24,8 @@
 
         .skillName  {
             display: block;
-            font-size: 8;
+            font-size: 8px;
+            text-align: center;
             white-space: nowrap;
             text-overflow: ellipsis;
             width: 50px;

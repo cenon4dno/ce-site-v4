@@ -10,13 +10,15 @@
   padding: 0;
   margin: 5px 0;
   .row {   
+    background-color: $white;
+    margin: 0 80px !important;
+
     &.rowFirst {
       .col {
         margin: 0;
       }
     }
-    background-color: $white;
-    margin: 0 80px !important;  
+      
     .col {
       background-color: $white;
       text-align: left;
