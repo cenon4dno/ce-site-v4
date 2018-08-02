@@ -3,7 +3,7 @@
         <span class="icon glyphicon {{cardInfo.icon}}" aria-hidden="true"></span>&nbsp;
         <span class="title">{{cardInfo.title}}</span>
         <div *ngIf="cardInfo.options" class="options">
-            <a *ngFor="let option of cardInfo.options" (click)="activateOption(cardInfo.title, option)">{{option}}</a>
+            <a *ngFor="let label of cardInfo.options" (click)="activateOption(cardInfo.title)">{{!option ? 'Show' : 'Hide'}} {{label}}</a>
         </div>
     </div>
     <div class="card-body" *ngIf="cardInfo.details">
@@ -25,7 +25,7 @@
         </div>
         <div class="skillCardContainer" *ngIf="cardInfo.details.skills">
             <div class="skillContainer" *ngFor="let skill of cardInfo.details.skills">
-                <skill-list [skillInfo]="skill" [option]="skillOption"></skill-list>
+                <skill-list [skillInfo]="skill" [option]="category == 'Skills' && option"></skill-list>
             </div>
         </div>
         <div *ngIf="cardInfo.details.training">
@@ -40,12 +40,12 @@
         </div>
         <div *ngIf="cardInfo.details.hobbies">
             <div class="hobbiesContainer" *ngFor="let hobbies of cardInfo.details.hobbies">
-                <hobbies-list [hobbiesInfo]="hobbies"></hobbies-list>
+                <hobbies-list [hobbiesInfo]="hobbies" [option]="category == 'Hobbies' && option"></hobbies-list>
             </div>
         </div>
         <div *ngIf="cardInfo.details.experiences">
             <div class="experienceContainer" *ngFor="let experience of cardInfo.details.experiences">
-                <experience-list [experienceInfo]="experience"></experience-list>
+                <experience-list [experienceInfo]="experience" [option]="category == 'Experience' && option"></experience-list>
             </div>
         </div>
     </div>

@@ -8,6 +8,6 @@
             class="material-icons">
             {{hobbiesInfo.icon}}
         </a>
-        <span class="name hidden">{{hobbiesInfo.name}}</span>
+        <span class="name" *ngIf="option">{{hobbiesInfo.name}}</span>
     </div>
 </div>

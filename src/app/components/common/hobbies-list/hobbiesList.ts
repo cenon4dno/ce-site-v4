@@ -8,7 +8,5 @@ import { Component, Input } from '@angular/core';
 
 export class HobbiesListComponent {
     @Input() hobbiesInfo;
-    position = 'before';
-
-    constructor() {}
+    @Input() option;
 }

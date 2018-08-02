@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component ({
     selector: 'experience-list',
@@ -10,8 +10,11 @@ export class ExperienceListComponent {
     @Input() experienceInfo;
     bTechnologyDetail: boolean = false;
     bProjectDetail: boolean = false;
-
-    constructor() {}
+    @Input()
+    set option(option: boolean) {
+        this.bTechnologyDetail = option;
+        this.bProjectDetail = option;
+    }
 
     showProject(bProjectStatus) {
         this.bProjectDetail = !bProjectStatus;

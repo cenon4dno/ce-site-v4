@@ -8,17 +8,13 @@ import { Component, Input } from '@angular/core';
 
 export class CardComponent {
     @Input() cardInfo: Object;
-    skillOption = false;
+    option = false;
+    category = '';
 
     constructor() {}
 
-    activateOption(category, option) {
-        switch(category) {
-            case "Skills":
-                this.skillOption = !this.skillOption;
-                break;
-        }
-        console.log(this.skillOption);
-
+    activateOption(category) {
+        this.option = !this.option;
+        this.category = category;
     }
 }
