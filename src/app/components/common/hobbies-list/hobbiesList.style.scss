@@ -20,7 +20,8 @@
     }
     .title {
         font-size: $font-medium;
-        display: inline;
+        text-align: center;
+        display: block;
         a {
             font-size: 32px;
             padding-top: 10px;
@@ -30,11 +31,10 @@
     }
 
     .name {
+        display: block;
         vertical-align: bottom;
-        position: absolute;
-        overflow: hidden;
-        white-space: nowrap; 
-        text-overflow: ellipsis;
+        text-align: center;
+        font-size: 8px;
     }
 
     a {
