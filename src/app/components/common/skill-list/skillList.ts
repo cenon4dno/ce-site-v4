@@ -10,5 +10,7 @@ export class SkillListComponent {
     @Input() skillInfo;
     @Input() option;
 
-    constructor() {}
+    ngOnInit() {
+        console.log(this.skillInfo);
+    }
 }

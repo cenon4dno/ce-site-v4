@@ -7,14 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 
 export class ExperienceListComponent {
-    @Input() experienceInfo;
     bTechnologyDetail: boolean = false;
     bProjectDetail: boolean = false;
+    @Input() experienceInfo;
     @Input()
     set option(option: boolean) {
         this.bTechnologyDetail = option;
         this.bProjectDetail = option;
     }
+    position = 'before';
 
     showProject(bProjectStatus) {
         this.bProjectDetail = !bProjectStatus;

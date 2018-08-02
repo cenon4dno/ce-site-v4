@@ -1,6 +1,10 @@
 <div class="skill-item">
-    <div class="icons" matTooltip="test">
+    <div class="icons" matTooltip="{{skillInfo.skillName}} | Rate: {{skillInfo.skillRate}} | Experience: {{skillInfo.experience || '0'}}">
         <i class="{{skillInfo.icon}} colored"></i>
-        <span *ngIf="option" class="skillName">{{skillInfo.skillName}}</span>
+        <span 
+            *ngIf="option" 
+            class="skillName">
+            {{skillInfo.skillName}}
+        </span>
     </div>
 </div>

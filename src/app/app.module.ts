@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTooltipModule } from '@angular/material';
 
 // Services
 import { LanguageService } from './services/language/language.service';
@@ -46,6 +47,10 @@ import { ExperienceListComponent } from './components/common/experience-list/exp
     RouterModule.forRoot([]),
     BrowserAnimationsModule,
     CommonModule,
+    MatTooltipModule
+  ],
+  exports: [
+    MatTooltipModule
   ],
   providers: [
     LanguageService,
