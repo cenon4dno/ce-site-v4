@@ -11,7 +11,7 @@
         color: $orange;
     }
     .title {
-        font-size: $font-medium;
+        font-size: $font-medium1;
         overflow: hidden;
         white-space: nowrap; 
         text-overflow: ellipsis;
@@ -42,13 +42,13 @@
         }
         > a {
             cursor: pointer;
-            font-size: 12px;
+            //font-size: 12px;
             display: block;
         }
         .position {
             font-weight: bold;
             font-style: italic;
-            font-size: 12px;
+            //font-size: 12px;
             white-space: nowrap;
             text-overflow: ellipsis;
             width: 80%;
@@ -56,21 +56,21 @@
         }
         .projectlink {
             i {
-                 font-size: 12px;
+                 //font-size: 12px;
                  vertical-align: bottom;
              }
          }
          .ProjectDetail {
-            font-size: 12px;
+            //font-size: 12px;
          }
         .technologylink {
            i {
-                font-size: 12px;
+                //font-size: 12px;
                 vertical-align: bottom;
             }
         }
         .technologyDetail {
-            font-size: 12px;
+            //font-size: 12px;
         }
     }
 

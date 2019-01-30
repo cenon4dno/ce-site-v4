@@ -11,11 +11,11 @@
     }
 
     .title {
-        font-size: $font-medium;
+        font-size: $font-medium1;
         overflow: hidden;
         white-space: nowrap; 
         text-overflow: ellipsis;
-        width: 100%;
+        width: 80%;
         display: block;
 
         .material-icons {
