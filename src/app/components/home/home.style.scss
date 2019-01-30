@@ -18,6 +18,10 @@
         margin: 0;
       }
     }
+
+    &.succeedingRow {
+      position: relative;
+    }
       
     .col {
       background-color: $white;
