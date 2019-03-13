@@ -15,6 +15,7 @@ export class HomeComponent {
 
   constructor(private langFile: LanguageService) {
     this.greetings = langFile.getSectionContent(this.header);
+    this.greetings[0] = this.greetings + " Test";
     this.contents = this.sortingOfContents(
       langFile.getPageContent(this.page)
     );
